@@ -64,6 +64,10 @@ const Index = () => {
   const generateHealthResponse = (query: string): string => {
     const lowerQuery = query.toLowerCase();
     
+    if (lowerQuery.includes("diabetes") && lowerQuery.includes("symptom")) {
+      return "Common symptoms of diabetes include: Increased thirst and frequent urination, unexplained weight loss, fatigue and weakness, blurred vision, slow-healing wounds, frequent infections, and tingling or numbness in hands or feet. If you experience these symptoms, especially increased thirst with frequent urination, consult a healthcare professional for proper testing and diagnosis.";
+    }
+    
     if (lowerQuery.includes("fever") || lowerQuery.includes("temperature")) {
       return "For fever: Monitor temperature regularly. Drink plenty of fluids, rest well. Seek medical attention if fever exceeds 102°F (39°C), persists for more than 3 days, or is accompanied by severe symptoms like difficulty breathing, persistent vomiting, or severe headache.";
     }
